@@ -119,6 +119,7 @@
 
                                     quality:    movie.Quality,
                                     torrent:    movie.TorrentUrl,
+                                    magnet:     movie.TorrentMagnetUrl,       // Add TorrentMagnetUrl
                                     torrents:   torrents,
                                     videos:     {},
                                     subtitles:  subtitles[imdbId],

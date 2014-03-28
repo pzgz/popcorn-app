@@ -146,6 +146,12 @@
             <% if (this.model.get('torrents')) { %>
               <a href="" class="p_tooltip play-button" disabled="disabled"><%= i18n.__('watchItNow') %></a>
             <% } %>
+
+            <% if (this.model.get('magnet')) { %>
+              <a href="" class="p_tooltip copy-magnet-button" data-toggle="tooltip" title="<%= i18n.__('copyMagnet') %>">
+                <i class="fa fa-magnet"></i>
+              </a>
+            <% } %>
           </div>
         </div>
       </div>

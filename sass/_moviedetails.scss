@@ -120,7 +120,7 @@ sidebar {
     }
   }
 
-  a.play-button {
+  a.play-button, a.copy-magnet-button {
     text-align: center;
     color: #FFF;
     font-weight: bold;
@@ -442,7 +442,7 @@ sidebar {
           }
         }
 
-        a.play-button {
+        a.play-button, a.copy-magnet-button {
           background: $popcorn-blue;
           background-image: linear-gradient(to bottom, #3076ce 0%, #175ab0 100%);
           color: #FFF;
@@ -460,6 +460,7 @@ sidebar {
             background-image: linear-gradient(to bottom, #ccc 0%, #777 100%);
           }
         }
+        a.copy-magnet-button { line-height: 16px; height: 16px; }     // To fix 1px higher issue on the magnet copy button
       }
     }
   }

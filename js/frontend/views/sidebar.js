@@ -4,10 +4,11 @@ App.View.Sidebar = Backbone.View.extend({
     template: _.template(SidebarTemplate),
 
     events: {
-        'click .closer':           'hide',
-        'click .play-button':      'play',
-        'click #switch-on':        'enableHD',
-        'click #switch-off':       'disableHD'
+        'click .closer':                'hide',
+        'click .play-button':           'play',
+        'click .copy-magnet-button':    'copyMagnet',
+        'click #switch-on':             'enableHD',
+        'click #switch-off':            'disableHD'
     },
 
     initialize: function () {
@@ -152,5 +153,12 @@ App.View.Sidebar = Backbone.View.extend({
             this.model.set('torrent', torrents['720p']);
             this.model.set('quality', '720p');
         }
+    },
+
+    copyMagnet: function (evt) {
+        evt.preventDefault();
+        var clipboard = gui.Clipboard.get();
+        clipboard.set( this.model.get('magnet'), 'text' );
+        console.logger.debug("Magenet link has been copied in clipboard.");
     }
 });
